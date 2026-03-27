@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglese - 0672202LLIN12</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --pa-color: #e74c3c;
+            --zz-color: #f39c12;
+            --le-color: #3baac8;
+            --bg-light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden; /* Evita scroll doppio */
+        }
+		
+		header {
+			background-color: var(--primary);
+			color: white;
+			padding: 10px 20px;
+			display: flex;
+			flex-direction: row; /* Forza l'allineamento orizzontale */
+			align-items: center; /* Centra verticalmente logo e testo */
+			gap: 15px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			white-space: nowrap; /* Impedisce al testo di andare a capo */
+		}
+
+		#logo {
+			width: 40px;
+			height: 40px;
+			flex-shrink: 0; /* Impedisce al logo di rimpicciolirsi se il testo è lungo */
+			cursor: pointer;
+		}
+
+		.title-container {
+			display: flex;
+			flex-direction: row; /* Allinea H1 e H2 sulla stessa riga */
+			align-items: baseline;
+			gap: 10px;
+		}
+
+		h1 { 
+			margin: 0; 
+			font-size: 0.95rem; 
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		h2 { 
+			margin: 0; 
+			font-size: 0.85rem; 
+			font-weight: normal;
+			color: #bdc3c7; /* Grigio chiaro per distinguersi dal titolo principale */
+		}
+
+		/* Nascondi il sottotitolo su schermi molto piccoli per evitare sovrapposizioni */
+		@media (max-width: 600px) {
+			h2 { display: none; }
+		}		
+
+        .tab-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .btn-pa { background: #fee; color: var(--pa-color); }
+        .btn-zz { background: #fff4e5; color: var(--zz-color); }
+        .btn-le { background: #d8f0f2; color: var(--le-color); }
+
+        .tab-btn.active { color: white; }
+        .btn-pa.active { background: var(--pa-color); }
+        .btn-zz.active { background: var(--zz-color); }
+        .btn-le.active { background: var(--le-color); }
+		
+		.test-completo {
+			color: #e74c3c !important; /* Rosso */
+			font-weight: bold !important;
+			font-style: italic !important;
+		}
+
+        .content-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            flex-direction: row; /* Default Desktop */
+        }
+
+        /* Sidebar Sotto-Aree */
+        .sidebar {
+            width: 300px;
+            background: white;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+            padding: 15px;
+            display: none;
+        }
+
+        .sidebar.active { display: block; }
+
+        .sub-area-title {
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 15px;
+            padding: 5px;
+            background: #f8f9fa;
+            color: #555;
+            border-left: 3px solid #ccc;
+        }
+
+        .section-list {
+            list-style: none;
+            padding: 0;
+            margin: 5px 0 15px 0;
+        }
+
+        .section-item {
+            padding: 10px 12px;
+            margin: 4px 0;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            border: 1px solid #eee;
+        }
+
+        .section-item:hover { background: #f0f0f0; }
+
+        /* Viewer */
+        .viewer {
+            flex: 1;
+            background: #fff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        iframe {
+            width: 100%;
+            flex: 1;
+            border: none;
+        }
+
+        /* RESPONSIVE PER SMARTPHONE */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column; /* Impila sidebar e viewer verticalmente */
+            }
+
+            .sidebar {
+                width: auto;
+                max-height: 40vh; /* La sidebar occupa max il 40% in altezza */
+                border-right: none;
+                border-bottom: 2px solid #ddd;
+            }
+
+            /* Quando un test è caricato, nascondiamo la sidebar su mobile per dare spazio */
+            body.test-active .sidebar {
+                display: none;
+            }
+            
+            body.test-active .btn-menu-toggle {
+                display: block;
+            }
+        }
+
+        .btn-menu-toggle {
+            display: none;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .placeholder {
+            padding: 40px 20px;
+            text-align: center;
+            color: #aaa;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+        }		
+    </style>
+</head>
+<body id="main-body">
+
+<header>
+    <img id="logo" src="./images/quiz.png" alt="Logo" title="Torna all'Index" onclick="window.location.href='index.html'" />
+    <div class="title-container">
+        <h1>LM67 - Scienze e Tecniche delle Attività Motorie Preventive e Adattate</h1>
+        <h1>Inglese</h1>
+    </div>
+</header>
+
+<div class="main-nav">
+    <button class="tab-btn btn-le active" onclick="showArea('le')" title="Test Lezioni Videocorso">Lezioni</button>
+    <button class="tab-btn btn-pa" onclick="showArea('pa')" title="Test Panieri affidabili">Panieri</button>
+    <button class="tab-btn btn-zz" onclick="showArea('zz')" title="Test Domande Esami Reali">Esami</button>
+</div>
+
+<div class="btn-menu-toggle" onclick="toggleMobileMenu()">☰ MOSTRA ELENCO ARGOMENTI</div>
+
+<div class="content-container">
+
+    <div id="le" class="sidebar active">
+        <div class="sub-area-title" >LEZIONI</div>
+        <ul class="section-list">
+            <li class="section-item" onclick="loadForm('https://forms.gle/1NQ9MNRb3Kbxr5UNA')">2 - Winning or losing - Sport, hobbies & leisure 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/EZQda9CAJUmbaEpy8')">3 - Winning or losing - Sport, hobbies & leisure 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/dgycRsEjza1Mvomr8')">4 - Winning or losing - Sport, hobbies & leisure 3 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/awsDZM6zEZ97MEpN8')">5 - High adventure 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NvYZ4da32Sejv35u7')">6 - High adventure 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/sUSS8a72jRCKB4kP7')">7 - Secret of the mind 1 (5 domande)</li>            
+			<li class="section-item" onclick="loadForm('https://forms.gle/xFUgM8J6etwhWLHy7')">8 - Secret of the mind 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/bKCjLrSUW8LCW2CM9')">9 - Secret of the mind 3 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NYu832A8RX5ZFHZM6')">10 - Describing (5 domande)</li>            
+			<li class="section-item" onclick="loadForm('https://forms.gle/uLQDaD8YQy4J8T7Q8')">11 - Competences 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NGKqJFsXSdDzQ7gw8')">12 - Competences 2 (5 domande)</li>
+			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/hLDukJpc7cU34xvt8')">Test completo (55 domande)</li>
+        </ul>
+		
+    </div>
+
+    <div id="pa" class="sidebar">
+        <div class="sub-area-title">PANIERI</div>
+        <ul class="section-list">
+            <li class="section-item" onclick="loadForm('https://forms.gle/njy8A6BHMUpot6Po6')">Prima Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/rrRUZY3hMfGGy9iWA')">Seconda Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/5HQmj6675xE9g3Ld9')">Terza Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/QyuveahaAKixK66H8')">Quarta Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/t5WHa8cH7Cb34fDT8')">Quinta Parte (20 domande)</li>
+            <li class="section-item test-completo" onclick="loadForm('https://forms.gle/3kEavjZ7rbx573gS7')">Test completo (140 domande)</li>
+			
+        </ul>
+    </div>
+
+    <div id="zz" class="sidebar">
+        <div class="sub-area-title">TEST ESAME</div>
+        <ul class="section-list">
+            <li class="section-item" onclick="loadForm('https://forms.gle/bBtrUM1rWLKc7thc9')">Prima Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/EvN4S5jJLYauXygM8')">Seconda Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/VzNC3pD1PwtPyzwa9')">Terza Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/GTVT8nWFts8R5ePB6')">Quarta Parte (24 domande)</li>
+            <li class="section-item test-completo" onclick="loadForm('https://forms.gle/JfkqBEZF7JzU2Rvq5')">Test completo (114 domande)</li>
+        </ul>
+    </div>
+
+    <div class="viewer">
+        <div id="placeholder" class="placeholder">
+            <h3>Seleziona un argomento</h3>
+            <p>Il test apparirà qui.</p>
+        </div>
+        <iframe id="form-frame" src="" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    function showArea(areaId) {
+        // Reset stato mobile
+        document.getElementById('main-body').classList.remove('test-active');
+        
+        document.querySelectorAll('.sidebar').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        
+        document.getElementById(areaId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+
+    function loadForm(url) {
+        if(url === 'URL_GOOGLE_FORM_QUI') {
+            alert("Link non ancora disponibile.");
+            return;
+        }
+        document.getElementById('placeholder').style.display = 'none';
+        document.getElementById('form-frame').src = url;
+
+        // Su mobile, nasconde il menu dopo la selezione per dare spazio al test
+        if (window.innerWidth <= 768) {
+            document.getElementById('main-body').classList.add('test-active');
+        }
+    }
+
+    function toggleMobileMenu() {
+        document.getElementById('main-body').classList.remove('test-active');
+    }
+</script>
+
+</body>
+</html>

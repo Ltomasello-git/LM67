@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>LM67 - Scienze e Tecniche delle Attività Motorie Preventive e Adattate</title>
+    <style>
+        body {
+            background-color: #b3d9ff; /* Azzurro chiaro */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #002040;
+        }
+        header {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #logo {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #001a33;
+        }
+        h2 {
+            font-weight: normal;
+            font-size: 1.5em;
+            margin: 0;
+            color: #003366;
+            margin-left: 80px; /* spazio per logo */
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        .label-btn {
+            background-color: #0073e6; /* sfondo azzurro più evidente */
+            color: white;
+            border: none;
+            border-radius: 12px;
+            width: 330px;
+            height: 150px;
+            font-size: 1em;
+            font-weight: bold; /* testo in grassetto */
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+            justify-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+        }
+        .label-btn:hover {
+            background-color: #005bb5;
+            box-shadow: 0 8px 14px rgba(0,0,0,0.3);
+        }
+        .label-btn:active {
+            background-color: #004080;
+            box-shadow: none;
+            transform: translateY(2px);
+        }
+		
+		.esame-superato {
+			background-color: #28a745 !important; /* Verde "success" */
+			cursor: default;
+		}
+
+		.esame-superato:hover {
+			background-color: #218838 !important; /* Verde leggermente più scuro al passaggio del mouse */
+		}
+		
+		.prossimo-esame {
+			background-color: #ffcc00 !important; /* Giallo intenso */
+			color: #000 !important; /* Testo nero per migliorare il contrasto sul giallo */
+		}
+
+		.prossimo-esame:hover {
+			background-color: #e6b800 !important; /* Giallo leggermente più scuro al passaggio del mouse */
+		}		
+    </style>
+    <script>
+        function openAndClosePage(url) {
+            window.location.href = url;
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('logo').addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="./images/quiz.png" alt="Logo" title="Torna all'Index" />
+        <div class="title-container">
+            <h1>LM67 - Scienze e Tecniche delle Attività Motorie Preventive e Adattate</h1>
+            <h2>Simulatore Test - Selezionare l'esame di riferimento</h2>
+        </div>
+    </header>
+    <div class="container">
+        <button class="label-btn esame-superato" onclick="openAndClosePage('#')">Teoria, tecnica, didattica dell'esercizio fisico adattato alle diverse fasce d'età<br>MEDF01XMEDF02<br><br>(14-03-2025) - (22/30)</button>
+        <button class="label-btn esame-superato" onclick="openAndClosePage('#')">METODI DI VALUTAZIONE, GESTIONE DEI DATI E DELLA CONOSCENZA, APPLICATI ALLE ATTIVITà MOTORIE<br>0672210MEDF02XINGINF05<br><br>(24.11.2025) - (25/30)</button>
+        <button class="label-btn esame-superato" onclick="openAndClosePage('#')">ASPETTI PSICOPEDAGOGICI E SOCIOLOGICI DELLE ATTIVITà MOTORIE<br>0672212SPS08XMPSI06<br><br>(29.01.2026) - (28/30)</button>
+        <button class="label-btn prossimo-esame" onclick="openAndClosePage('0672211BIO09XBIO16.html')">ANATOMIA E FISIOLOGIA DELL'ATTIVITà MOTORIA ADATTATA<br>0672211BIO09XBIO16<br><br>(29.04.2026)</button>
+        <button class="label-btn" onclick="openAndClosePage('0672202LLIN12.html')">INGLESE<br>0672202LLIN12<br><br>(25.06.2026)</button>
+        <button class="label-btn" onclick="openAndClosePage('#')">METODOLOGIA DELLA PREVENZIONE: CONTROLLO ORMONALE ED ELEMENTI DI DIETETICA<br>0672210MED49XMED13<br><br>(26.06.2026)</button>
+        <button class="label-btn" onclick="openAndClosePage('#')">TRAUMATOLOGIA E RIABILITAZIONE DELL'APPARATO LOCOMOTORE<br>0672406MED33XMED34<br><br>(24.09.2026)</button>
+        <button class="label-btn" onclick="openAndClosePage('#')">TEORIA, TECNICA, DIDATTICA E ATTIVITà MOTORIE PER LE POPOLAZIONI SPECIALI<br>0672210MEDF02XMEDF01<br><br>(23.10.2026)</button>
+        <button class="label-btn" onclick="openAndClosePage('0672209MED07XBIO10.html')">BASI BIOCHIMICHE E MOLECOLARI DEL BENESSERE DELLA PERSONA<br>0672209MED07XBIO10<br><br>(Da definire)</button>
+        <button class="label-btn" onclick="openAndClosePage('#')">PREVENZIONE E RISOLUZIONE DELLE PATOLOGIE ASSOCIATE A DISTURBI DELL'APPARATO MUSCOLO SCHELETRICO<br>0672204MED04II<br><br>(Da definire)</button>
+        <button class="label-btn" onclick="openAndClosePage('#')">RECUPERO FUNZIONALE ??????<br><br>(Da definire)</button>
+    </div>
+</body>
+</html>
