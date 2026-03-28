@@ -10,6 +10,7 @@
             --pa-color: #e74c3c;
             --zz-color: #f39c12;
             --le-color: #3baac8;
+            --gr-color: #299b29;
             --bg-light: #f4f7f6;
         }
 
@@ -83,11 +84,13 @@
         .btn-pa { background: #fee; color: var(--pa-color); }
         .btn-zz { background: #fff4e5; color: var(--zz-color); }
         .btn-le { background: #d8f0f2; color: var(--le-color); }
+        .btn-gr { background: #d8f0f2; color: var(--gr-color); }		
 
         .tab-btn.active { color: white; }
         .btn-pa.active { background: var(--pa-color); }
         .btn-zz.active { background: var(--zz-color); }
         .btn-le.active { background: var(--le-color); }
+        .btn-gr.active { background: var(--gr-color); }
 		
 		.test-completo {
 			color: #e74c3c !important; /* Rosso */
@@ -199,7 +202,43 @@
         .title-container {
             display: flex;
             flex-direction: column;
-        }		
+        }
+
+		/* Stile base sottomenu */
+		.submenu {
+			display: none;
+			list-style: none;
+			padding-left: 20px;
+			margin: 5px 0;
+		}
+
+		.submenu.open {
+			display: block;
+		}
+
+		.submenu-item {
+			padding: 8px 12px;
+			margin: 2px 0;
+			background: #fff;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 0.85rem;
+			border: 1px solid #eee;
+			transition: all 0.2s ease;
+		}
+
+		/* Hover semplice */
+		.submenu-item:hover {
+			background: #f0f0f0;
+		}
+
+		/* STATO SELEZIONATO: Grigio scuro persistente */
+		.submenu-item.selected-option {
+			background-color: var(--le-color) !important; /* Usa l'azzurro già definito nel tuo :root */
+			color: white !important;
+			font-weight: bold;
+			border-color: #2c8ea8;
+		}	
     </style>
 </head>
 <body id="main-body">
@@ -226,18 +265,25 @@
     <div id="gr" class="sidebar active">
         <div class="sub-area-title" >GRAMMATICA</div>
         <ul class="section-list">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">2 - Winning or losing - Sport, hobbies & leisure 1 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">3 - Winning or losing - Sport, hobbies & leisure 2 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">4 - Winning or losing - Sport, hobbies & leisure 3 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">5 - High adventure 1 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">6 - High adventure 2 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">7 - Secret of the mind 1 (5 domande)</li>            
-			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI7')">8 - Secret of the mind 2 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">9 - Secret of the mind 3 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">10 - Describing (5 domande)</li>            
-			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">11 - Competences 1 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">12 - Competences 2 (5 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI')">Test completo (55 domande)</li>
+            <!--<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L02 - Winning or losing - Sport, hobbies & leisure 1</li>-->
+			<li class="section-item" onclick="toggleSubmenu('sub-l02')">
+						L02 - Winning or losing - Sport, hobbies & leisure 1 ▼
+					</li>
+					<ul id="sub-l02" class="submenu">
+						<li class="submenu-item" onclick="loadForm('https://forms.gle/bBtrUM1rWLKc7thc9', this)">Opzione 1: Grammar Focus</li>
+						<li class="submenu-item" onclick="loadForm('URL_2', this)">Opzione 2: Vocabulary</li>
+						<li class="submenu-item" onclick="loadForm('URL_3', this)">Opzione 3: Practice Test</li>
+					</ul>            
+			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L03 - Winning or losing - Sport, hobbies & leisure 2</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L04 - Winning or losing - Sport, hobbies & leisure 3</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L05 - High adventure 1</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L06 - High adventure 2</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L07 - Secret of the mind 1</li>            
+			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L08 - Secret of the mind 2</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L09 - Secret of the mind 3</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L10 - Describing</li>            
+			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L11 - Competences 1</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L12 - Competences 2</li>
         </ul>
 		
     </div>
@@ -245,17 +291,17 @@
     <div id="le" class="sidebar">
         <div class="sub-area-title" >LEZIONI</div>
         <ul class="section-list">
-            <li class="section-item" onclick="loadForm('https://forms.gle/1NQ9MNRb3Kbxr5UNA')">2 - Winning or losing - Sport, hobbies & leisure 1 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/EZQda9CAJUmbaEpy8')">3 - Winning or losing - Sport, hobbies & leisure 2 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/dgycRsEjza1Mvomr8')">4 - Winning or losing - Sport, hobbies & leisure 3 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/awsDZM6zEZ97MEpN8')">5 - High adventure 1 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/NvYZ4da32Sejv35u7')">6 - High adventure 2 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/sUSS8a72jRCKB4kP7')">7 - Secret of the mind 1 (5 domande)</li>            
-			<li class="section-item" onclick="loadForm('https://forms.gle/xFUgM8J6etwhWLHy7')">8 - Secret of the mind 2 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/bKCjLrSUW8LCW2CM9')">9 - Secret of the mind 3 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/NYu832A8RX5ZFHZM6')">10 - Describing (5 domande)</li>            
-			<li class="section-item" onclick="loadForm('https://forms.gle/uLQDaD8YQy4J8T7Q8')">11 - Competences 1 (5 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/NGKqJFsXSdDzQ7gw8')">12 - Competences 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/1NQ9MNRb3Kbxr5UNA')">L02 - Winning or losing - Sport, hobbies & leisure 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/EZQda9CAJUmbaEpy8')">L03 - Winning or losing - Sport, hobbies & leisure 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/dgycRsEjza1Mvomr8')">L04 - Winning or losing - Sport, hobbies & leisure 3 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/awsDZM6zEZ97MEpN8')">L05 - High adventure 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NvYZ4da32Sejv35u7')">L06 - High adventure 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/sUSS8a72jRCKB4kP7')">L07 - Secret of the mind 1 (5 domande)</li>            
+			<li class="section-item" onclick="loadForm('https://forms.gle/xFUgM8J6etwhWLHy7')">L08 - Secret of the mind 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/bKCjLrSUW8LCW2CM9')">L09 - Secret of the mind 3 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NYu832A8RX5ZFHZM6')">L10 - Describing (5 domande)</li>            
+			<li class="section-item" onclick="loadForm('https://forms.gle/uLQDaD8YQy4J8T7Q8')">L11 - Competences 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NGKqJFsXSdDzQ7gw8')">L12 - Competences 2 (5 domande)</li>
 			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/hLDukJpc7cU34xvt8')">Test completo (55 domande)</li>
         </ul>
 		
@@ -295,17 +341,47 @@
 </div>
 
 <script>
-    function showArea(areaId) {
-        // Reset stato mobile
-        document.getElementById('main-body').classList.remove('test-active');
-        
-        document.querySelectorAll('.sidebar').forEach(s => s.classList.remove('active'));
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        
-        document.getElementById(areaId).classList.add('active');
-        event.currentTarget.classList.add('active');
-    }
+	function showArea(areaId) {
+		const frame = document.getElementById('form-frame');
+		
+		// Controllo se c'è un test caricato (se l'src non è vuoto)
+		if (frame.src !== "" && frame.src !== window.location.href) {
+			const conferma = confirm("Cambiando sezione perderai i progressi nel test attuale. Vuoi continuare?");
+			if (!conferma) {
+				return; // Interrompe il cambio area se l'utente clicca 'Annulla'
+			}
+		}
 
+		// --- RESET INTERFACCIA ---
+		// 1. Pulizia Frame e ripristino placeholder
+		frame.src = "";
+		document.getElementById('placeholder').style.display = 'block';
+
+		// 2. Reset stato mobile
+		document.getElementById('main-body').classList.remove('test-active');
+		
+		// 3. Gestione Tab e Sidebar
+		document.querySelectorAll('.sidebar').forEach(s => s.classList.remove('active'));
+		document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+		
+		// 4. Chiusura Sottomenu e Reset evidenza azzurra
+		document.querySelectorAll('.submenu').forEach(sub => {
+			sub.classList.remove('open');
+		});
+		document.querySelectorAll('.submenu-item').forEach(item => {
+			item.classList.remove('selected-option');
+		});
+
+		// --- ATTIVAZIONE NUOVA AREA ---
+		document.getElementById(areaId).classList.add('active');
+		// Usiamo event.currentTarget per gestire il bottone cliccato
+		if (event && event.currentTarget) {
+			event.currentTarget.classList.add('active');
+		}
+	}
+
+ 
+    /*
     function loadForm(url) {
         if(url === 'URL_GOOGLE_FORM_QUI') {
             alert("Link non ancora disponibile.");
@@ -319,10 +395,49 @@
             document.getElementById('main-body').classList.add('test-active');
         }
     }
+	*/
+	
+	function loadForm(url, element) {
+		if(url === 'URL_GOOGLE_FORM_QUI' || url === 'URL_1') {
+			alert("Link non ancora disponibile.");
+			return;
+		}
 
+		const frame = document.getElementById('form-frame');
+
+		// Controllo se un test è già attivo prima di caricarne uno nuovo
+		if (frame.src !== "" && frame.src !== window.location.href && frame.src !== url) {
+			const conferma = confirm("Hai un test in corso. Se procedi, i progressi attuali andranno persi. Vuoi continuare?");
+			if (!conferma) {
+				return; // L'utente ha annullato, restiamo sul test corrente
+			}
+		}
+
+		// Gestione evidenziazione AZZURRA
+		if (element) {
+			document.querySelectorAll('.submenu-item').forEach(item => {
+				item.classList.remove('selected-option');
+			});
+			element.classList.add('selected-option');
+		}
+
+		// Caricamento del nuovo test
+		document.getElementById('placeholder').style.display = 'none';
+		frame.src = url;
+
+		if (window.innerWidth <= 768) {
+			document.getElementById('main-body').classList.add('test-active');
+		}
+	}
+	
     function toggleMobileMenu() {
         document.getElementById('main-body').classList.remove('test-active');
     }
+	
+	function toggleSubmenu(id) {
+		const submenu = document.getElementById(id);
+		submenu.classList.toggle('open');
+	}
 </script>
 
 </body>
