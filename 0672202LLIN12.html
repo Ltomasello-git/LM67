@@ -213,7 +213,8 @@
 </header>
 
 <div class="main-nav">
-    <button class="tab-btn btn-le active" onclick="showArea('le')" title="Test Lezioni Videocorso">Lezioni</button>
+    <button class="tab-btn btn-gr active" onclick="showArea('gr')" title="Grammatica Lezioni Videocorso">Grammatica</button>
+    <button class="tab-btn btn-le" onclick="showArea('le')" title="Test Lezioni Videocorso">Lezioni</button>
     <button class="tab-btn btn-pa" onclick="showArea('pa')" title="Test Panieri affidabili">Panieri</button>
     <button class="tab-btn btn-zz" onclick="showArea('zz')" title="Test Domande Esami Reali">Esami</button>
 </div>
@@ -222,7 +223,26 @@
 
 <div class="content-container">
 
-    <div id="le" class="sidebar active">
+    <div id="gr" class="sidebar active">
+        <div class="sub-area-title" >GRAMMATICA</div>
+        <ul class="section-list">
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">2 - Winning or losing - Sport, hobbies & leisure 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">3 - Winning or losing - Sport, hobbies & leisure 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">4 - Winning or losing - Sport, hobbies & leisure 3 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">5 - High adventure 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">6 - High adventure 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">7 - Secret of the mind 1 (5 domande)</li>            
+			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI7')">8 - Secret of the mind 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">9 - Secret of the mind 3 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">10 - Describing (5 domande)</li>            
+			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">11 - Competences 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">12 - Competences 2 (5 domande)</li>
+			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI')">Test completo (55 domande)</li>
+        </ul>
+		
+    </div>
+
+    <div id="le" class="sidebar">
         <div class="sub-area-title" >LEZIONI</div>
         <ul class="section-list">
             <li class="section-item" onclick="loadForm('https://forms.gle/1NQ9MNRb3Kbxr5UNA')">2 - Winning or losing - Sport, hobbies & leisure 1 (5 domande)</li>
