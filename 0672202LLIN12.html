@@ -21,7 +21,7 @@
             display: flex;
             flex-direction: column;
             height: 100vh;
-            overflow: hidden; /* Evita scroll doppio */
+            overflow: hidden; 
         }
 		
 		header {
@@ -29,23 +29,23 @@
 			color: white;
 			padding: 10px 20px;
 			display: flex;
-			flex-direction: row; /* Forza l'allineamento orizzontale */
-			align-items: center; /* Centra verticalmente logo e testo */
+			flex-direction: row; 
+			align-items: center; 
 			gap: 15px;
 			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-			white-space: nowrap; /* Impedisce al testo di andare a capo */
+			white-space: nowrap; 
 		}
 
 		#logo {
 			width: 40px;
 			height: 40px;
-			flex-shrink: 0; /* Impedisce al logo di rimpicciolirsi se il testo è lungo */
+			flex-shrink: 0; 
 			cursor: pointer;
 		}
 
 		.title-container {
 			display: flex;
-			flex-direction: row; /* Allinea H1 e H2 sulla stessa riga */
+			flex-direction: row; 
 			align-items: baseline;
 			gap: 10px;
 		}
@@ -61,10 +61,9 @@
 			margin: 0; 
 			font-size: 0.85rem; 
 			font-weight: normal;
-			color: #bdc3c7; /* Grigio chiaro per distinguersi dal titolo principale */
+			color: #bdc3c7; 
 		}
 
-		/* Nascondi il sottotitolo su schermi molto piccoli per evitare sovrapposizioni */
 		@media (max-width: 600px) {
 			h2 { display: none; }
 		}		
@@ -84,16 +83,14 @@
         .btn-pa { background: #fee; color: var(--pa-color); }
         .btn-zz { background: #fff4e5; color: var(--zz-color); }
         .btn-le { background: #d8f0f2; color: var(--le-color); }
-        .btn-gr { background: #d8f0f2; color: var(--gr-color); }		
 
         .tab-btn.active { color: white; }
         .btn-pa.active { background: var(--pa-color); }
         .btn-zz.active { background: var(--zz-color); }
         .btn-le.active { background: var(--le-color); }
-        .btn-gr.active { background: var(--gr-color); }
 		
 		.test-completo {
-			color: #e74c3c !important; /* Rosso */
+			color: #e74c3c !important; 
 			font-weight: bold !important;
 			font-style: italic !important;
 		}
@@ -102,10 +99,9 @@
             display: flex;
             flex: 1;
             overflow: hidden;
-            flex-direction: row; /* Default Desktop */
+            flex-direction: row; 
         }
 
-        /* Sidebar Sotto-Aree */
         .sidebar {
             width: 300px;
             background: white;
@@ -146,7 +142,6 @@
 
         .section-item:hover { background: #f0f0f0; }
 
-        /* Viewer */
         .viewer {
             flex: 1;
             background: #fff;
@@ -161,20 +156,18 @@
             border: none;
         }
 
-        /* RESPONSIVE PER SMARTPHONE */
         @media (max-width: 768px) {
             .content-container {
-                flex-direction: column; /* Impila sidebar e viewer verticalmente */
+                flex-direction: column; 
             }
 
             .sidebar {
                 width: auto;
-                max-height: 40vh; /* La sidebar occupa max il 40% in altezza */
+                max-height: 40vh; 
                 border-right: none;
                 border-bottom: 2px solid #ddd;
             }
 
-            /* Quando un test è caricato, nascondiamo la sidebar su mobile per dare spazio */
             body.test-active .sidebar {
                 display: none;
             }
@@ -204,7 +197,6 @@
             flex-direction: column;
         }
 
-		/* Stile base sottomenu */
 		.submenu {
 			display: none;
 			list-style: none;
@@ -217,28 +209,36 @@
 		}
 
 		.submenu-item {
-			padding: 8px 12px;
-			margin: 2px 0;
-			background: #fff;
-			border-radius: 4px;
+			padding: 10px 15px;
+			margin: 5px 0 5px 15px;
+			background: #ffffff;
+			border-radius: 5px;
 			cursor: pointer;
-			font-size: 0.85rem;
-			border: 1px solid #eee;
-			transition: all 0.2s ease;
+			font-size: 0.9rem;
+			font-style: italic;
+			font-weight: bold;
+			color: #00008B; 
+			border: 1px solid #ddd;
+			transition: all 0.3s ease;
 		}
 
-		/* Hover semplice */
 		.submenu-item:hover {
 			background: #f0f0f0;
+			color: #0000CD;           
 		}
 
-		/* STATO SELEZIONATO: Grigio scuro persistente */
 		.submenu-item.selected-option {
-			background-color: var(--le-color) !important; /* Usa l'azzurro già definito nel tuo :root */
+			background-color: var(--le-color) !important;
 			color: white !important;
-			font-weight: bold;
 			border-color: #2c8ea8;
-		}	
+		}
+
+		.section-item.menu-open {
+			background-color: #e9ecef !important; 
+			border-left: 5px solid var(--le-color); 
+			font-weight: bold;
+			color: var(--primary);
+		}		
     </style>
 </head>
 <body id="main-body">
@@ -252,8 +252,7 @@
 </header>
 
 <div class="main-nav">
-    <button class="tab-btn btn-gr active" onclick="showArea('gr')" title="Grammatica Lezioni Videocorso">Grammatica</button>
-    <button class="tab-btn btn-le" onclick="showArea('le')" title="Test Lezioni Videocorso">Lezioni</button>
+    <button class="tab-btn btn-le active" onclick="showArea('le')" title="Test Lezioni Videocorso">Lezioni</button>
     <button class="tab-btn btn-pa" onclick="showArea('pa')" title="Test Panieri affidabili">Panieri</button>
     <button class="tab-btn btn-zz" onclick="showArea('zz')" title="Test Domande Esami Reali">Esami</button>
 </div>
@@ -262,33 +261,7 @@
 
 <div class="content-container">
 
-    <div id="gr" class="sidebar active">
-        <div class="sub-area-title" >GRAMMATICA</div>
-        <ul class="section-list">
-            <!--<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L02 - Winning or losing - Sport, hobbies & leisure 1</li>-->
-			<li class="section-item" onclick="toggleSubmenu('sub-l02')">
-						L02 - Winning or losing - Sport, hobbies & leisure 1 ▼
-					</li>
-					<ul id="sub-l02" class="submenu">
-						<li class="submenu-item" onclick="loadForm('https://forms.gle/bBtrUM1rWLKc7thc9', this)">Opzione 1: Grammar Focus</li>
-						<li class="submenu-item" onclick="loadForm('URL_2', this)">Opzione 2: Vocabulary</li>
-						<li class="submenu-item" onclick="loadForm('URL_3', this)">Opzione 3: Practice Test</li>
-					</ul>            
-			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L03 - Winning or losing - Sport, hobbies & leisure 2</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L04 - Winning or losing - Sport, hobbies & leisure 3</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L05 - High adventure 1</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L06 - High adventure 2</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L07 - Secret of the mind 1</li>            
-			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L08 - Secret of the mind 2</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L09 - Secret of the mind 3</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L10 - Describing</li>            
-			<li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L11 - Competences 1</li>
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI')">L12 - Competences 2</li>
-        </ul>
-		
-    </div>
-
-    <div id="le" class="sidebar">
+    <div id="le" class="sidebar active">
         <div class="sub-area-title" >LEZIONI</div>
         <ul class="section-list">
             <li class="section-item" onclick="loadForm('https://forms.gle/1NQ9MNRb3Kbxr5UNA')">L02 - Winning or losing - Sport, hobbies & leisure 1 (5 domande)</li>
@@ -304,7 +277,6 @@
             <li class="section-item" onclick="loadForm('https://forms.gle/NGKqJFsXSdDzQ7gw8')">L12 - Competences 2 (5 domande)</li>
 			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/hLDukJpc7cU34xvt8')">Test completo (55 domande)</li>
         </ul>
-		
     </div>
 
     <div id="pa" class="sidebar">
@@ -315,8 +287,8 @@
             <li class="section-item" onclick="loadForm('https://forms.gle/5HQmj6675xE9g3Ld9')">Terza Parte (30 domande)</li>
             <li class="section-item" onclick="loadForm('https://forms.gle/QyuveahaAKixK66H8')">Quarta Parte (30 domande)</li>
             <li class="section-item" onclick="loadForm('https://forms.gle/t5WHa8cH7Cb34fDT8')">Quinta Parte (20 domande)</li>
-            <li class="section-item test-completo" onclick="loadForm('https://forms.gle/3kEavjZ7rbx573gS7')">Test completo (140 domande)</li>
-			
+            <li class="section-item" onclick="loadForm('https://forms.gle/JV9QzbzN9Cs16EJw8')">Sesta Parte (26 domande)</li>
+            <li class="section-item test-completo" onclick="loadForm('https://forms.gle/psNQBcbjcgfx9tyi9')">Test completo (166 domande)</li>
         </ul>
     </div>
 
@@ -344,99 +316,58 @@
 	function showArea(areaId) {
 		const frame = document.getElementById('form-frame');
 		
-		// Controllo se c'è un test caricato (se l'src non è vuoto)
 		if (frame.src !== "" && frame.src !== window.location.href) {
-			const conferma = confirm("Cambiando sezione perderai i progressi nel test attuale. Vuoi continuare?");
-			if (!conferma) {
-				return; // Interrompe il cambio area se l'utente clicca 'Annulla'
+			if (!confirm("Cambiando sezione perderai i progressi nel test attuale. Continuare?")) {
+				return;
 			}
 		}
 
-		// --- RESET INTERFACCIA ---
-		// 1. Pulizia Frame e ripristino placeholder
 		frame.src = "";
 		document.getElementById('placeholder').style.display = 'block';
-
-		// 2. Reset stato mobile
-		document.getElementById('main-body').classList.remove('test-active');
-		
-		// 3. Gestione Tab e Sidebar
 		document.querySelectorAll('.sidebar').forEach(s => s.classList.remove('active'));
 		document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
 		
-		// 4. Chiusura Sottomenu e Reset evidenza azzurra
-		document.querySelectorAll('.submenu').forEach(sub => {
-			sub.classList.remove('open');
-		});
-		document.querySelectorAll('.submenu-item').forEach(item => {
-			item.classList.remove('selected-option');
-		});
+		document.querySelectorAll('.submenu').forEach(sub => sub.classList.remove('open'));
+		document.querySelectorAll('.section-item').forEach(item => item.classList.remove('menu-open'));
+		document.querySelectorAll('.submenu-item').forEach(item => item.classList.remove('selected-option'));
 
-		// --- ATTIVAZIONE NUOVA AREA ---
 		document.getElementById(areaId).classList.add('active');
-		// Usiamo event.currentTarget per gestire il bottone cliccato
-		if (event && event.currentTarget) {
-			event.currentTarget.classList.add('active');
-		}
+		if (event && event.currentTarget) event.currentTarget.classList.add('active');
 	}
 
- 
-    /*
-    function loadForm(url) {
-        if(url === 'URL_GOOGLE_FORM_QUI') {
-            alert("Link non ancora disponibile.");
-            return;
-        }
-        document.getElementById('placeholder').style.display = 'none';
-        document.getElementById('form-frame').src = url;
-
-        // Su mobile, nasconde il menu dopo la selezione per dare spazio al test
-        if (window.innerWidth <= 768) {
-            document.getElementById('main-body').classList.add('test-active');
-        }
-    }
-	*/
-	
 	function loadForm(url, element) {
-		if(url === 'URL_GOOGLE_FORM_QUI' || url === 'URL_1') {
-			alert("Link non ancora disponibile.");
-			return;
-		}
-
 		const frame = document.getElementById('form-frame');
 
-		// Controllo se un test è già attivo prima di caricarne uno nuovo
 		if (frame.src !== "" && frame.src !== window.location.href && frame.src !== url) {
-			const conferma = confirm("Hai un test in corso. Se procedi, i progressi attuali andranno persi. Vuoi continuare?");
-			if (!conferma) {
-				return; // L'utente ha annullato, restiamo sul test corrente
+			if (!confirm("Hai un test in corso. Cambiando opzione perderai i progressi. Continuare?")) {
+				return;
 			}
 		}
 
-		// Gestione evidenziazione AZZURRA
-		if (element) {
-			document.querySelectorAll('.submenu-item').forEach(item => {
-				item.classList.remove('selected-option');
-			});
-			element.classList.add('selected-option');
-		}
+		document.querySelectorAll('.submenu-item').forEach(item => {
+			item.classList.remove('selected-option');
+		});
+		if(element) element.classList.add('selected-option');
 
-		// Caricamento del nuovo test
 		document.getElementById('placeholder').style.display = 'none';
 		frame.src = url;
-
-		if (window.innerWidth <= 768) {
-			document.getElementById('main-body').classList.add('test-active');
-		}
 	}
 	
     function toggleMobileMenu() {
         document.getElementById('main-body').classList.remove('test-active');
     }
 	
-	function toggleSubmenu(id) {
-		const submenu = document.getElementById(id);
-		submenu.classList.toggle('open');
+	function toggleSubmenu(id, element) {
+		const targetSubmenu = document.getElementById(id);
+		const isOpen = targetSubmenu.classList.contains('open');
+
+		document.querySelectorAll('.submenu').forEach(sub => sub.classList.remove('open'));
+		document.querySelectorAll('.section-item').forEach(item => item.classList.remove('menu-open'));
+
+		if (!isOpen) {
+			targetSubmenu.classList.add('open');
+			element.classList.add('menu-open');
+		}
 	}
 </script>
 
