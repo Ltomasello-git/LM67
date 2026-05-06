@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METODOLOGIA DELLA PREVENZIONE: CONTROLLO ORMONALE ED ELEMENTI DI DIETETICA - 0672210MED49XMED13</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --pa-color: #e74c3c;
+            --zz-color: #f39c12;
+            --le-color: #3baac8;
+            --gr-color: #299b29;
+            --bg-light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-light);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden; 
+        }
+		
+		header {
+			background-color: var(--primary);
+			color: white;
+			padding: 10px 20px;
+			display: flex;
+			flex-direction: row; 
+			align-items: center; 
+			gap: 15px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			white-space: nowrap; 
+		}
+
+		#logo {
+			width: 40px;
+			height: 40px;
+			flex-shrink: 0; 
+			cursor: pointer;
+		}
+
+		.title-container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		h1 { 
+			margin: 0; 
+			font-size: 0.95rem; 
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		h2 { 
+			margin: 0; 
+			font-size: 0.85rem; 
+			font-weight: normal;
+			color: #bdc3c7; 
+		}
+
+        .main-nav {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tab-btn {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            margin: 5px;
+        }
+
+        .btn-pa { background: #fee; color: var(--pa-color); }
+        .btn-zz { background: #fff4e5; color: var(--zz-color); }
+        .btn-le { background: #d8f0f2; color: var(--le-color); }
+
+        .tab-btn.active { color: white; }
+        .btn-pa.active { background: var(--pa-color); }
+        .btn-zz.active { background: var(--zz-color); }
+        .btn-le.active { background: var(--le-color); }
+		
+		.test-completo {
+			color: #e74c3c !important; 
+			font-weight: bold !important;
+			font-style: italic !important;
+		}
+
+        .content-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            flex-direction: row; 
+        }
+
+        .sidebar {
+            width: 300px;
+            background: white;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+            padding: 15px;
+            display: none;
+        }
+
+        .sidebar.active { display: block; }
+
+        /* Stile aggiornato per i titoli dei blocchi */
+        .sub-area-title {
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            color: #333;
+            border-left: 4px solid var(--le-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            transition: background 0.2s;
+        }
+
+        .sub-area-title:hover {
+            background: #e9ecef;
+        }
+
+        /* Liste nascoste di default */
+        .section-list-toggle {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section-list-toggle.open {
+            display: block;
+        }
+
+        .section-item {
+            padding: 10px 12px;
+            margin: 2px 0;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: 0.2s;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-item:hover { background: #f0f0f0; }
+
+        .viewer {
+            flex: 1;
+            background: #fff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        iframe {
+            width: 100%;
+            flex: 1;
+            border: none;
+        }
+
+        .btn-menu-toggle {
+            display: none;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .placeholder {
+            padding: 40px 20px;
+            text-align: center;
+            color: #aaa;
+        }
+
+		.submenu-item.selected-option {
+			background-color: var(--le-color) !important;
+			color: white !important;
+		}
+
+        @media (max-width: 768px) {
+            .content-container { flex-direction: column; }
+            .sidebar { width: auto; max-height: 40vh; border-right: none; border-bottom: 2px solid #ddd; }
+            .btn-menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body id="main-body">
+
+<header>
+    <img id="logo" src="Images/quiz.png" alt="Logo" onclick="window.location.href='index.html'" />
+    <div class="title-container">
+        <h1>LM67 - Scienze e Tecniche delle Attività Motorie Preventive e Adattate</h1>
+        <h1>METODOLOGIA DELLA PREVENZIONE: CONTROLLO ORMONALE ED ELEMENTI DI DIETETICA</h1>
+    </div>
+</header>
+
+<div class="main-nav">
+    <button class="tab-btn btn-le active" onclick="showArea('le', this)">Lezioni</button>
+    <button class="tab-btn btn-pa" onclick="showArea('pa', this)">Panieri</button>
+    <button class="tab-btn btn-zz" onclick="showArea('zz', this)">Esami</button>
+</div>
+
+<div class="btn-menu-toggle" onclick="toggleMobileMenu()">☰ MOSTRA ELENCO ARGOMENTI</div>
+
+<div class="content-container">
+
+    <div id="le" class="sidebar active">
+        
+        <div class="sub-area-title" onclick="toggleAccordion('med49-singole')">Med/49 - Lezioni singole <span>▼</span></div>
+        <ul id="med49-singole" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('https://forms.gle/p5cKkaUiSFxVGyMPA', this)">L01 - Introduzione al corso (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/Y2YHASUDFd4pVtS16', this)">L02 - Introduzione alla nutrizione (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/chL4fUJKbuvLLTnNA', this)">L03 - La corretta alimentazione (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/WCCMcmJGWmzHxZSH8', this)">L04 - Carne, pesce, uova. Latte e derivati (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/earRQZkUg6oXmFdR7', this)">L05 - Cereali. Legumi. Condimenti (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/2b2HFcHrt2SY8USD7', this)">L06 - Le verdure (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/LD4fp9pNvoszwBLBA', this)">L07 - La frutta e la frutta secca (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/moWRpyv6AtiTBbuk7', this)">L08 - Alimenti raffinati e integrali (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/hgytPX31UJKHEFAA7', this)">L09 - Sali Minerali - 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/zHi4oEZ5cGUZB6Cy7', this)">L10 - Sali Minerali - 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/nqW9g5cVkLr1FRwk9', this)">L11 - Integratori (5 domande)</li>
+            <li class="section-item" onclick="loadForm('NO TEST', this)">L12 - La prevenzione (No test)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/XQ2cd9koXNszAJvY7', this)">L13 - Alimentazione e cancro (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/iDz2PgXSVhrmZuCN9', this)">L14 - Nutrizione del giovane (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/vjbDj4eQBp8ZapGNA', this)">L15 - Studio della composizione corporea (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/26f5QuegrCAyEjei7', this)">L16 - Il dispendio energetico (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/hppLTjq91iqtbB2L6', this)">L17 - Proposte nutrizionali per lo sport (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/moHqXC7S9HKxB3gY8', this)">L18 - Caso clinico nutrizione nello sport (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/fEf7M4smdjhkCeaa7', this)">L19 - La malnutrizione (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/pkrsMJTXuShyZMR46', this)">L20 - Obesità (5 domande)</li>
+        </ul>
+
+        <div class="sub-area-title" onclick="toggleAccordion('med49-blocchi')">Med/49 - Blocchi <span>▼</span></div>
+        <ul id="med49-blocchi" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('https://forms.gle/3QoKdgAneKxnKfDD6', this)">L01 - L05 (25 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/m9Fy3qUALJpxo6br5', this)">L06 - L10 (25 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/kVjRAJjcG4V5uFbF9', this)">L11 - L15 (20 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/AqH2EqhaofB87amj8', this)">L16 - L20 (25 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/KycTiGAR2DE9Mp3j7', this)">L01 - L10 (50 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/iCe4PmkdrfTVTuvT7', this)">L11 - L20 (45 domande)</li>
+			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/Ne5M4vhKgxrGqKLa6', this)">Test completo (95 domande)</li>
+        </ul>	
+
+        <div class="sub-area-title" onclick="toggleAccordion('med13-singole')">Med/13 - Lezioni singole <span>▼</span></div>
+        <ul id="med13-singole" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('NO TEST', this)">L01 - Introduzione al corso (No test)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/EvpW4HtETQeHt4Qj8', this)">L02 - Feedback e meccanismi di azione ormonale (6 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/Wku4b2EVbPaMqAGPA', this)">L03 - Ghiandole endocrine 1 (6 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/UoAd1cLvPw6bKqBN7', this)">L04 - Ghiandole endocrine 2 (6 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/CiphS1RyZLbW2knt7', this)">L05 - Ghiandole endocrine 3 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/5woYxDAXoyuhcp3v9', this)">L06 - Ghiandole endocrine 4 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/P7JEPQXUPzNhiLrS6', this)">L07 - Ghiandole endocrine 5 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/DW7NtSxUhhpN5h8a8', this)">L08 - Metabolismo del glucosio (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/AxGzk8sEix5v6haSA', this)">L09 - Omeostasi del glucosio (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/w9Nq1v9mHMNTaDJq9', this)">L10 - Sistema incretinico (7 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/DwnB1AoZ27apM9my7', this)">L11 - Controllo ormonale dell'esercizio fisico 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/Dy3HGVMYBCiJ5FSB6', this)">L12 - DCA - alcol (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/4kPd6K7dyjDgduZc6', this)">L13 - Controllo ormonale dell'esercizio fisico 2 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/J5E57L7EN5QcDdJY6', this)">L14 - Doping ormonale (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/cgKdVhShZFw8ct278', this)">L15 - Diabete mellito (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/755fdAnxbpM2a397A', this)">L16 - Diabete ed Esercizio Fisico 1 (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NgSa6TigknabYJJ87', this)">L17 - Esercizio fisico e prevenzione coronarica (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/c4XVU3pjYfUschzXA', this)">L18 - Scompenso cardiaco (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/ZF28qUVqyKDoLEcG9', this)">L19 - Principali meccanismi di insulino-resistenza (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/5SDqsQVry3Aq8umb7', this)">L20 - Scompenso ed esercizio (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/gHMfzfW1bscmABvh6', this)">L21 - Esercizio ed osteoporosi (5 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/7dS8XQ49QW44VcE96', this)">L22 - Il meraviglioso mondo del sonno (5 domande)</li>
+        </ul>	
+
+        <div class="sub-area-title" onclick="toggleAccordion('med13-blocchi')">Med/13 - Blocchi <span>▼</span></div>
+        <ul id="med13-blocchi" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('https://forms.gle/mbbqq2SALLFAK3Ms5', this)">L01 - L06 (29 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/FYdkEF2rBvfUzqAG9', this)">L07 - L12 (32 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/yLxyRaHq1otidTbY8', this)">L13 - L18 (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/zkdziMksc1wTPzia9', this)">L19 - L22 (20 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/z3nSAqGSX3DjAPVC6', this)">L01 - L12 (61 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/BTN6NL6Au6LFnUbJ7', this)">L13 - L22 (50 domande)</li>
+			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/siLtrGT8NwVrq4pB8', this)">Test completo (111 domande)</li>
+        </ul>	 
+    </div>
+
+    <div id="pa" class="sidebar">
+        <div class="sub-area-title">PANIERI</div>
+        <ul class="section-list-toggle open">
+            <li class="section-item" onclick="loadForm('https://forms.gle/njy8A6BHMUpot6Po6', this)">Prima Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/rrRUZY3hMfGGy9iWA', this)">Seconda Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/5HQmj6675xE9g3Ld9', this)">Terza Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/QyuveahaAKixK66H8', this)">Quarta Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/t5WHa8cH7Cb34fDT8', this)">Quinta Parte (20 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/JV9QzbzN9Cs16EJw8', this)">Sesta Parte (26 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/HmxrC4FJd2WfVBKt6', this)">Settima Parte (22 domande)</li>			
+            <li class="section-item test-completo" onclick="loadForm('https://forms.gle/RDYyfvgrQjp3vRyy9', this)">Test completo (188 domande)</li>
+        </ul>
+    </div>
+
+    <div id="zz" class="sidebar">
+        <div class="sub-area-title">TEST ESAME</div>
+        <ul class="section-list-toggle open">
+            <li class="section-item" onclick="loadForm('https://forms.gle/bBtrUM1rWLKc7thc9', this)">Prima Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/EvN4S5jJLYauXygM8', this)">Seconda Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/VzNC3pD1PwtPyzwa9', this)">Terza Parte (30 domande)</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/GTVT8nWFts8R5ePB6', this)">Quarta Parte (24 domande)</li>
+            <li class="section-item test-completo" onclick="loadForm('https://forms.gle/JfkqBEZF7JzU2Rvq5', this)">Test completo (114 domande)</li>
+        </ul>
+    </div>
+
+    <div class="viewer">
+        <div id="placeholder" class="placeholder">
+            <h3>Seleziona un argomento</h3>
+            <p>Il test apparirà qui.</p>
+        </div>
+        <iframe id="form-frame" src="" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    // Gestione Accordion per le sezioni Med/49 e Med/13
+    function toggleAccordion(id) {
+        const target = document.getElementById(id);
+        const allLists = document.querySelectorAll('#le .section-list-toggle');
+        const isOpen = target.classList.contains('open');
+
+        // Chiude tutti i menu della sezione Lezioni
+        allLists.forEach(list => list.classList.remove('open'));
+
+        // Se non era già aperto, lo apre
+        if (!isOpen) {
+            target.classList.add('open');
+        }
+    }
+
+	function showArea(areaId, btn) {
+		const frame = document.getElementById('form-frame');
+		
+		if (frame.src !== "" && frame.src !== window.location.href && frame.src !== "about:blank") {
+			if (!confirm("Cambiando sezione perderai i progressi nel test attuale. Continuare?")) {
+				return;
+			}
+		}
+
+		frame.src = "";
+		document.getElementById('placeholder').style.display = 'block';
+		document.querySelectorAll('.sidebar').forEach(s => s.classList.remove('active'));
+		document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+		
+		document.getElementById(areaId).classList.add('active');
+		btn.classList.add('active');
+	}
+
+	function loadForm(url, element) {
+		const frame = document.getElementById('form-frame');
+
+        if(url === 'URL_GOOGLE_FORM_QUI') {
+            alert("Link non ancora disponibile.");
+            return;
+        }
+		
+        if(url === 'NO TEST') {
+            alert("Non sono previsti test per questa lezione.");
+            return;
+        }
+		
+        document.getElementById('placeholder').style.display = 'none';
+        document.getElementById('form-frame').src = url;
+
+		if (frame.src !== "" && frame.src !== window.location.href && frame.src !== url && frame.src !== "about:blank") {
+			if (!confirm("Hai un test in corso. Cambiando opzione perderai i progressi. Continuare?")) {
+				return;
+			}
+		}
+
+		document.querySelectorAll('.section-item').forEach(item => {
+			item.classList.remove('selected-option');
+		});
+		if(element) element.classList.add('selected-option');
+
+		document.getElementById('placeholder').style.display = 'none';
+		frame.src = url;
+	}
+	
+    function toggleMobileMenu() {
+        // Logica semplice per mostrare la sidebar su mobile
+        const sidebar = document.querySelector('.sidebar.active');
+        if(sidebar) sidebar.scrollIntoView();
+    }
+</script>
+
+</body>
+</html>

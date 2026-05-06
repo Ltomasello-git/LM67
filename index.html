@@ -81,6 +81,15 @@
 			background-color: #218838 !important; /* Verde leggermente più scuro al passaggio del mouse */
 		}
 		
+		.esame-daconfermare {
+			background-color: #c100ff !important; /* Orange "success" */
+			cursor: default;
+		}
+
+		.esame-daconfermare:hover {
+			background-color: #ff00d2 !important; /* Orange leggermente più scuro al passaggio del mouse */
+		}		
+		
 		.prossimo-esame {
 			background-color: #ffcc00 !important; /* Giallo intenso */
 			color: #000 !important; /* Testo nero per migliorare il contrasto sul giallo */
@@ -113,9 +122,9 @@
         <button class="label-btn esame-superato" onclick="openAndClosePage('#')">Teoria, tecnica, didattica dell'esercizio fisico adattato alle diverse fasce d'età<br>MEDF01XMEDF02<br><br>(14-03-2025) - (22/30)</button>
         <button class="label-btn esame-superato" onclick="openAndClosePage('#')">METODI DI VALUTAZIONE, GESTIONE DEI DATI E DELLA CONOSCENZA, APPLICATI ALLE ATTIVITà MOTORIE<br>0672210MEDF02XINGINF05<br><br>(24.11.2025) - (25/30)</button>
         <button class="label-btn esame-superato" onclick="openAndClosePage('#')">ASPETTI PSICOPEDAGOGICI E SOCIOLOGICI DELLE ATTIVITà MOTORIE<br>0672212SPS08XMPSI06<br><br>(29.01.2026) - (28/30)</button>
-        <button class="label-btn prossimo-esame" onclick="openAndClosePage('0672211BIO09XBIO16.html')">ANATOMIA E FISIOLOGIA DELL'ATTIVITà MOTORIA ADATTATA<br>0672211BIO09XBIO16<br><br>(29.04.2026)</button>
-        <button class="label-btn" onclick="openAndClosePage('0672202LLIN12.html')">INGLESE<br>0672202LLIN12<br><br>(25.06.2026)</button>
-        <button class="label-btn" onclick="openAndClosePage('#')">METODOLOGIA DELLA PREVENZIONE: CONTROLLO ORMONALE ED ELEMENTI DI DIETETICA<br>0672210MED49XMED13<br><br>(26.06.2026)</button>
+        <button class="label-btn esame-daconfermare" onclick="openAndClosePage('0672211BIO09XBIO16.html')">ANATOMIA E FISIOLOGIA DELL'ATTIVITà MOTORIA ADATTATA<br>0672211BIO09XBIO16<br><br>(29.04.2026) - (22/30)</button>
+        <button class="label-btn prossimo-esame" onclick="openAndClosePage('0672202LLIN12.html')">INGLESE<br>0672202LLIN12<br><br>(25.06.2026)</button>
+        <button class="label-btn prossimo-esame" onclick="openAndClosePage('0672210MED49XMED13.html')">METODOLOGIA DELLA PREVENZIONE: CONTROLLO ORMONALE ED ELEMENTI DI DIETETICA<br>0672210MED49XMED13<br><br>(26.06.2026)</button>
         <button class="label-btn" onclick="openAndClosePage('#')">TRAUMATOLOGIA E RIABILITAZIONE DELL'APPARATO LOCOMOTORE<br>0672406MED33XMED34<br><br>(24.09.2026)</button>
         <button class="label-btn" onclick="openAndClosePage('#')">TEORIA, TECNICA, DIDATTICA E ATTIVITà MOTORIE PER LE POPOLAZIONI SPECIALI<br>0672210MEDF02XMEDF01<br><br>(23.10.2026)</button>
         <button class="label-btn" onclick="openAndClosePage('0672209MED07XBIO10.html')">BASI BIOCHIMICHE E MOLECOLARI DEL BENESSERE DELLA PERSONA<br>0672209MED07XBIO10<br><br>(Da definire)</button>
