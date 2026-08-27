@@ -226,8 +226,8 @@
 
 <div class="main-nav">
     <button class="tab-btn btn-le active" onclick="showArea('le', this)">Lezioni</button>
-    <button class="tab-btn btn-40" onclick="showArea('40', this)">Set dei test</button>
-    <!--<button class="tab-btn btn-pa" onclick="showArea('te', this)">Test Estesi</button>-->
+    <button class="tab-btn btn-40" onclick="showArea('40', this)">Panieri</button>
+    <button class="tab-btn btn-pa" onclick="showArea('te', this)">Simulazione</button>
 </div>
 
 <div class="btn-menu-toggle" onclick="toggleMobileMenu()">☰ MOSTRA ELENCO ARGOMENTI</div>
@@ -377,211 +377,36 @@
 
     </div>	
 	
-	<!--
 	
     <div id="te" class="sidebar">
-        <div class="sub-area-title" onclick="toggleAccordion('TEL01')">L01 - Introduzione al corso <span>▼</span></div>
-        <ul id="TEL01" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/jQBeZ3yNsjjzKu489', this)">Test Prima Parte (30 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/3txZAnkCH6DkfjMR6', this)">Test Seconda Parte (31 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/r6fGYRXe2UvwS1uC7', this)">Test completo (61 domande)</li>
-        </ul>	 
-
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL02')">L02 - Generalità sulle fratture <span>▼</span></div>
-        <ul id="TEL02" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/YLb5AY2JQc7PnSNX7', this)">Test Prima Parte (43 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/WmPWvvSvUKpDygCe6', this)">Test Seconda Parte (44 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/JF4yavaPsZSLpyZK8', this)">Test completo (87 domande)</li>
-        </ul>	 
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL03')">L03 -  Lesioni meniscali<span>▼</span></div>
-        <ul id="TEL03" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/Rx3L1HE6iuCVyzLb9', this)">Test Prima Parte (43 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/CWJ9LyJ9geWekNbx5', this)">Test Seconda Parte (44 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/piMxfZcY3YsubyBB6', this)">Test completo (87 domande)</li>
-        </ul>
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL04')">L04 -  Lesioni capsulo-legamentose del ginocchio: i legamenti crociati<span>▼</span></div>
-        <ul id="TEL04" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/9Gi9p4hwSftW9oLm8', this)">Test Prima Parte (34 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/N53TUdTKKVyGixSf8', this)">Test Seconda Parte (35 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/9Ufgy8CCE69BpHVB9', this)">Test Terza Parte (31 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/zEqMiEvi5F91mzYi8', this)">Test completo (100 domande)</li>
-        </ul>
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL05')">L05 -  Lesioni legamentose del ginocchio: i legamenti collaterali<span>▼</span></div>
-        <ul id="TEL05" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/xffVHCy67zEWxyUG9', this)">Test Prima Parte (30 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/wqMBZ7zo9R9HF8bN9', this)">Test Prima Parte (18 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/MSKAsMwL7Ge9z2hF9', this)">Test completo (48 domande)</li>
-        </ul>
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL06')">L06 - La spalla: instabilità<span>▼</span></div>
-        <ul id="TEL06" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/MdmV62Yjq4Mdw6nc9', this)">Test Prima Parte (37 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/2b5LMAPYJNQdRN9o7', this)">Test Seconda Parte (38 domande)</li>
-            <li class="section-item test-completo" onclick="loadForm('https://forms.gle/iUBDTGRP7K4qaZkn6', this)">Test completo (75 domande)</li>
-        </ul>
-		
-        <div class="sub-area-title" onclick="toggleAccordion('TEL07')">L07 - La caviglia: lesioni legamentose<span>▼</span></div>
-        <ul id="TEL07" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/6ffmRQzs6RaUXbuG8', this)">Test Prima Parte (37 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/UgDzBtf6RD1uTyTGA', this)">Test Seconda Parte (38 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/jaKUxuKvWafQnYan6', this)">Test completo (75 domande)</li>
-        </ul>		
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL08')">L08 - Fratture del collo piede e rottura del tendine di Achille<span>▼</span></div>
-        <ul id="TEL08" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/Z1LBkxrLhREiXtsE9', this)">Test Prima Parte (30 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/6bBjKWbxtK9zsguQA', this)">Test Seconda Parte (30 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/yyEr7akUxVeqkqGV8', this)">Test Terza Parte (22 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/fkxVjsq6gmN6ZEHC9', this)">Test completo (82 domande)</li>
-        </ul>	
-		
-        <div class="sub-area-title" onclick="toggleAccordion('TEL09')">L09 - Lombosciatalgie e cervicobrachialgie<span>▼</span></div>
-        <ul id="TEL09" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/kkjuGsg7b1bp5BHy8', this)">Test Prima Parte (30 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/Z8FkWXFkv2nwJZYF6', this)">Test Seconda Parte (30 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/nEu7YqoZUym4djQp9', this)">Test completo (60 domande)</li>
-        </ul>			
-		
-        <div class="sub-area-title" onclick="toggleAccordion('TEL10')">L10 - Collo femore<span>▼</span></div>
-        <ul id="TEL10" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/GQU4gyE96WepCAsj9', this)">Test Prima Parte (30 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/X6a1PeFKzA43oCm27', this)">Test Prima Parte (33 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/3gRYdstbXqY6xMAj7', this)">Test completo (63 domande)</li>
-        </ul>			
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL11')">L11 - Le tendinopatie<span>▼</span></div>
-        <ul id="TEL11" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/Z43RyH1FNwxxRTCy5', this)">Test Prima Parte (30 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/iSWKWE1GscTwiQWK8', this)">Test Seconda Parte (30 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/XDowp3FfTbXemDYT8', this)">Test Terza Parte (30 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/zVB5DC6qmMY18zhD7', this)">Test completo (90 domande)</li>
-        </ul>	
 	
-        <div class="sub-area-title" onclick="toggleAccordion('TEL12')">L12 - La Riabilitazione: concetti generali<span>▼</span></div>
-        <ul id="TEL12" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/ES5bCCTPeQzZHzVt6', this)">Test Prima Parte (34 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/DeoUuKRSHLqQ7q766', this)">Test Prima Parte (35 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/VVMC48nZR8D1c37a9', this)">Test Prima Parte (34 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/PzBLvhXXUpTXbMgE7', this)">Test completo (103 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL13')">L13 - International Classification of Functioning (ICF)<span>▼</span></div>
-        <ul id="TEL13" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/UKHEoyyNszjo5qdV6', this)">Test Prima Parte (37 domande)</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/xddNHBGFBefEr48h7', this)">Test Seconda Parte (39 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('https://forms.gle/VZKEvSZSftwR1Suv6', this)">Test completo (76 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL14')">L14 - Il Team ed i Percorsi Riabilitativi<span>▼</span></div>
-        <ul id="TEL14" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (52 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (52 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL15')">L15 - Attività Fisica Adattata (AFA)<span>▼</span></div>
-        <ul id="TEL15" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (45 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (45 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL16')">L16 - L'Esercizio Fisico: L'Isocinetica<span>▼</span></div>
-        <ul id="TEL16" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (26 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (26 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL17')">L17 - Potenziamento Muscolare<span>▼</span></div>
-        <ul id="TEL17" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (20 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (20 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL18')">L18 - Approccio Riabilitativo alle Lesioni Muscolari<span>▼</span></div>
-        <ul id="TEL18" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (25 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (25 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL19')">L19 - Riabilitazione della terza età<span>▼</span></div>
-        <ul id="TEL19" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (27 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (27 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL20')">L20 - Tecniche Riabilitative<span>▼</span></div>
-        <ul id="TEL20" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL21')">L21 - Trattamento conservativo Lombalgia<span>▼</span></div>
-        <ul id="TEL21" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL22')">L22 - Il Cammino: Aspetti Clinici (No test)<span>▼</span></div>
-        <ul id="TEL22" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>			
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL23')">L23 - Il Cammino: biomeccanica ed aspetti energetici<span>▼</span></div>
-        <ul id="TEL23" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL24')">L24 - Assessment: analisi del movimento (cinematica)<span>▼</span></div>
-        <ul id="TEL24" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>			
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL25')">L25 - Assessment: analisi del movimento (dinamica ed elettrofisiologia)<span>▼</span></div>
-        <ul id="TEL25" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL26')">L26 - Sistemi robotici per la riabilitazione: concetti generali<span>▼</span></div>
-        <ul id="TEL26" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>			
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL27')">L27 - Teleriabilitazione: concetti generali<span>▼</span></div>
-        <ul id="TEL27" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL28')">L28 - L'Attività Sportiva del Disabile<span>▼</span></div>
-        <ul id="TEL28" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>			
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL29')">L29 - Studio della cinematica del nuoto<span>▼</span></div>
-        <ul id="TEL29" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>	
-
-        <div class="sub-area-title" onclick="toggleAccordion('TEL30')">L30 - Analisi biomeccanica del gesto sportivo nel tennis<span>▼</span></div>
-        <ul id="TEL30" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test Prima Parte (16 domande)</li>
-			<li class="section-item test-completo" onclick="loadForm('URL_GOOGLE_FORM_QUI', this)">Test completo (16 domande)</li>
-        </ul>			
-
-
+        <div class="sub-area-title" onclick="toggleAccordion('TE001')">Moduli di simulazione<span>▼</span></div>
+        <ul id="TE001" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('https://forms.gle/a7bQrnW9L3PdBCmx8', this)">Modulo 01 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/B1CZBbqNqoesioi88', this)">Modulo 02 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/6BDAzqoXJKEc2UG47', this)">Modulo 03 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/7vR88uZDE7xPLiYJ6', this)">Modulo 04 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/QUaXFpTu5ScKriKo9', this)">Modulo 05 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/Dd7Lj7mGXsitkxZV7', this)">Modulo 06 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/yxeALHp1yrPqkVYL8', this)">Modulo 07 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/qwCM6UuQ9SWPkJ8b8', this)">Modulo 08 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/Y6qs8kPeHeoEgs6M7', this)">Modulo 09 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/XXtvGvCvpd7gtLXs9', this)">Modulo 10 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/2dHWCqv3XDnHsbN37', this)">Modulo 11 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/1V9JjaxnaZL9uSHR9', this)">Modulo 12 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/wJrH83BMTTKeY4eJ9', this)">Modulo 13 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/jFuJ5zRTRfcDp6nk7', this)">Modulo 14 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/TyCokizcu1RqSXma8', this)">Modulo 15 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/eS3qwKrWHYhoVGgV8', this)">Modulo 16 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/XWps1jvxqRDj8A496', this)">Modulo 17 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/nwEEG81Uup2GTekdA', this)">Modulo 18 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/edQ4fewm7SjKczB99', this)">Modulo 19 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/ysx4QtF34NNXxrmHA', this)">Modulo 20 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/dejXvtcqn2BJDA9D8', this)">Modulo 21 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/EkrT5t8Pxgehw8th6', this)">Modulo 22 di simulazione</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/W2sSEmXwFoqabNzBA', this)">Modulo 23 di simulazione</li>
     </div>	
 	
-	-->
 	
 
     <div class="viewer">
