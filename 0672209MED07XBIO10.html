@@ -221,8 +221,8 @@
 
 <div class="main-nav">
     <button class="tab-btn btn-le active" onclick="showArea('le', this)">Lezioni</button>
-    <button class="tab-btn btn-df" onclick="showArea('df', this)">Docsity AI frazionato</button>
     <button class="tab-btn btn-pa" onclick="showArea('pa', this)">Panieri</button>
+    <button class="tab-btn btn-df" onclick="showArea('df', this)">Docsity AI frazionato</button>
     <button class="tab-btn btn-si" onclick="showArea('si', this)">Simulazione</button>
 </div>
 
@@ -307,6 +307,37 @@
         </ul>	 
     </div>
 
+	<!-- SEZIONE PANIERI -->
+	<div id="pa" class="sidebar">
+        <div class="sub-area-title" onclick="toggleAccordion('pa-blocchi')">Panieri - Elenco Quiz <span>▼</span></div>
+        <ul id="pa-blocchi" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('https://forms.gle/6CQY48PewRABCLp16', this)">Blocco 01</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/TdEh8bMYDEAHfnhW7', this)">Blocco 02</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/21XtYNYd8GqHQt5J6', this)">Blocco 03</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NFYqtJ9xJhLe2r5t7', this)">Blocco 04</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/suM31db5vRWAQLk77', this)">Blocco 05</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/2N6MEjNNQyEfRQyc8', this)">Blocco 06</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/sfkhFZzbmBmwdYLv6', this)">Blocco 07</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/2exJds3bbw1PWmWK7', this)">Blocco 08</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/RBX1JZXHAuJJgX757', this)">Blocco 09</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/4zevKUSRPQS5tXrb8', this)">Blocco 10</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/4i6YJT41pMy33wTR8', this)">Blocco 11</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/YNKSssR16aa8grSD8', this)">Blocco 12</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/AstakpFiTGffiz2U9', this)">Blocco 13</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/hvEE16yvoLDgCAkx9', this)">Blocco 14</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/dQj8fvY22rL61o9T7', this)">Blocco 15</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/7pkiKGU1zj6da9PdA', this)">Blocco 16</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/vaz8mSVHrPvrd31J6', this)">Blocco 17</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/uLthqfTsPXHDQ9Kf8', this)">Blocco 18</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/zrfKu5DgJJE8BJzJ6', this)">Blocco 19</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/bseBgfw9Dd66ePZo6', this)">Blocco 20</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/dPjwSCJ6H2zPUxoH7', this)">Blocco 21</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/ZFbWy54hkjXeYEXw9', this)">Blocco 22</li>
+        </ul>	 
+	</div>	
+
+
+
 	<!-- SEZIONE DOCSITY AI FRAZIONATO (CORRETTA CON ACCORDION) -->
 	<div id="df" class="sidebar">
         <div class="sub-area-title" onclick="toggleAccordion('df-blocchi')">Docsity AI - Elenco Quiz (30 Domande)<span>▼</span></div>
@@ -342,45 +373,54 @@
         </ul>	 
 	</div>
 	
-	<!-- SEZIONE PANIERI -->
-	<div id="pa" class="sidebar">
-        <div class="sub-area-title" onclick="toggleAccordion('pa-blocchi')">Panieri - Elenco Quiz <span>▼</span></div>
-        <ul id="pa-blocchi" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('https://forms.gle/6CQY48PewRABCLp16', this)">Blocco 01</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/TdEh8bMYDEAHfnhW7', this)">Blocco 02</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/21XtYNYd8GqHQt5J6', this)">Blocco 03</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/NFYqtJ9xJhLe2r5t7', this)">Blocco 04</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/suM31db5vRWAQLk77', this)">Blocco 05</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/2N6MEjNNQyEfRQyc8', this)">Blocco 06</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/sfkhFZzbmBmwdYLv6', this)">Blocco 07</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/2exJds3bbw1PWmWK7', this)">Blocco 08</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/RBX1JZXHAuJJgX757', this)">Blocco 09</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/4zevKUSRPQS5tXrb8', this)">Blocco 10</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/4i6YJT41pMy33wTR8', this)">Blocco 11</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/YNKSssR16aa8grSD8', this)">Blocco 12</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/AstakpFiTGffiz2U9', this)">Blocco 13</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/hvEE16yvoLDgCAkx9', this)">Blocco 14</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/dQj8fvY22rL61o9T7', this)">Blocco 15</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/7pkiKGU1zj6da9PdA', this)">Blocco 16</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/vaz8mSVHrPvrd31J6', this)">Blocco 17</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/uLthqfTsPXHDQ9Kf8', this)">Blocco 18</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/zrfKu5DgJJE8BJzJ6', this)">Blocco 19</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/bseBgfw9Dd66ePZo6', this)">Blocco 20</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/dPjwSCJ6H2zPUxoH7', this)">Blocco 21</li>
-            <li class="section-item" onclick="loadForm('https://forms.gle/ZFbWy54hkjXeYEXw9', this)">Blocco 22</li>
-        </ul>	 
-	</div>	
 	
 
     <div id="si" class="sidebar">
-        <div class="sub-area-title" onclick="toggleAccordion('sim-Docsity')">Simulazione Docsity <span>▼</span></div>
-        <ul id="sim-Docsity" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('', this)">Simulazione 01</li>
+        <div class="sub-area-title" onclick="toggleAccordion('sim-Parte1')">Parte 1<span>▼</span></div>
+        <ul id="sim-Parte1" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('https://forms.gle/5yiV6E5q1eNdQGuS8', this)">Simulazione 01</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/v7x6szrUE9qabt2B9', this)">Simulazione 02</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/VhVukU9BWxH6C8JQ7', this)">Simulazione 03</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/QWg855uNJAboAp7M9', this)">Simulazione 04</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 05</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 06</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 07</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 08</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 09</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 10</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 11</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 12</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 13</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 14</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 15</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 16</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 17</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 18</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 19</li>
         </ul>
 
-        <div class="sub-area-title" onclick="toggleAccordion('sim-Panieri')">Simulazione Panieri <span>▼</span></div>
-        <ul id="sim-Panieri" class="section-list-toggle">
-            <li class="section-item" onclick="loadForm('', this)">Simulazione 01</li>
+        <div class="sub-area-title" onclick="toggleAccordion('sim-Parte2')">Parte 2<span>▼</span></div>
+        <ul id="sim-Parte2" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 20</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 21</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 22</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 23</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 24</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 25</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 26</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 27</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 28</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 29</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 30</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 31</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 32</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 33</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 34</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 35</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 36</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 37</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 38</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 39</li>
         </ul>
 	
 	
