@@ -87,12 +87,14 @@
         .btn-le { background: #d8f0f2; color: #000000; } 
 		.btn-df { background: #d8f0f2; color: #000000; } 	
         .btn-pa { background: #d8f0f2; color: #000000; }
+		.btn-so { background: #d8f0f2; color: #000000; }
 		.btn-si { background: #d8f0f2; color: #000000; }
 
         .btn-zz.active { background: var(--zz-color); }
         .btn-le.active { background: #00ffff; color: #ff0000;}
 		.btn-df.active { background: #00ffff; color: #ff0000;}
         .btn-pa.active { background: #00ffff; color: #ff0000; }		
+		.btn-so.active { background: #00ffff; color: #ff0000; }
 		.btn-si.active { background: #00ffff; color: #ff0000; }
 		
 		.test-completo {
@@ -223,7 +225,8 @@
     <button class="tab-btn btn-le active" onclick="showArea('le', this)">Lezioni</button>
     <button class="tab-btn btn-pa" onclick="showArea('pa', this)">Panieri</button>
     <button class="tab-btn btn-df" onclick="showArea('df', this)">Docsity AI frazionato</button>
-    <button class="tab-btn btn-si" onclick="showArea('si', this)">Simulazione</button>
+    <button class="tab-btn btn-so" onclick="showArea('so', this)">Simulazione con domande sempre nello stesso ordine</button>
+    <button class="tab-btn btn-si" onclick="showArea('si', this)">Simulazione con domande random</button>
 </div>
 
 <div class="btn-menu-toggle" onclick="toggleMobileMenu()">☰ MOSTRA ELENCO ARGOMENTI</div>
@@ -372,6 +375,64 @@
 			-->
         </ul>	 
 	</div>
+
+    <div id="so" class="sidebar">
+        <div class="sub-area-title" onclick="toggleAccordion('simord-Parte1')">Parte 1<span>▼</span></div>
+        <ul id="simord-Parte1" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('https://forms.gle/kVYdHis3pbJZjEHU7', this)">Simulazione 01</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/vnQnMZF6DqvarUSP9', this)">Simulazione 02</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/Vc3qckxxapWfJL6i8', this)">Simulazione 03</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/NcQCWFQpq1ZhVtvG6', this)">Simulazione 04</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/UBrnAZ49EvwGKbiz6', this)">Simulazione 05</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/om4S3KsGcLfpFMRd8', this)">Simulazione 06</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/FGkkt6G4Ljotvoyu5', this)">Simulazione 07</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/aiiTvTCt9kbS9K8R7', this)">Simulazione 08</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/tNL5Quu8zUnaXLwVA', this)">Simulazione 09</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/4kYEaK6MUXgX4nhZ8', this)">Simulazione 10</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/FgQrjbTKJs8CpzSZ9', this)">Simulazione 11</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/sAS7v7LhfidVhb7AA', this)">Simulazione 12</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/6y3i8jsyGMBfy8ho9', this)">Simulazione 13</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/Cts2ErUxtg6skpmP8', this)">Simulazione 14</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/1N3LWYRHsq66szrH8', this)">Simulazione 15</li>
+            <li class="section-item" onclick="loadForm('https://forms.gle/KMqYS2MRkM4nam1MA', this)">Simulazione 16</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 17</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 18</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 19</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 20</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 21</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 22</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 23</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 24</li>
+        </ul>
+
+        <div class="sub-area-title" onclick="toggleAccordion('simord-Parte2')">Parte 2<span>▼</span></div>
+        <ul id="simord-Parte2" class="section-list-toggle">
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 25</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 26</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 27</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 28</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 29</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 30</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 31</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 32</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 33</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 34</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 35</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 36</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 37</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 38</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 39</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 40</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 41</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 42</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 43</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 44</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 45</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 46</li>
+            <li class="section-item" onclick="loadForm('', this)">Simulazione 47</li>
+        </ul>
+	
+	</div>	
 	
 	
 
@@ -430,8 +491,6 @@
             <li class="section-item" onclick="loadForm('', this)">Simulazione 46</li>
             <li class="section-item" onclick="loadForm('', this)">Simulazione 47</li>
         </ul>
-	
-	
 	
 	</div>	
 
